@@ -28,7 +28,6 @@ jobs:
         with:
           workload_identity_provider: projects/957176400089/locations/global/workloadIdentityPools/github-actions/providers/github
           service_account: github-actions-sa@travel-agency-448103.iam.gserviceaccount.com
-          token_format: "access_token"
           create_credentials_file: true
 
       - name: Set up Cloud SDK
