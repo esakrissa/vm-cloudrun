@@ -6,7 +6,7 @@ This repository contains a simple FastAPI application that is deployed to Google
 
 It's live: https://fastapi-demo-957176400089.us-central1.run.app
 
-FastAPI Swagger UI: https://fastapi-demo-957176400089.us-central1.run.app/docs
+FastAPI swagger UI: https://fastapi-demo-957176400089.us-central1.run.app/docs
 
 ## Setup Instructions
 
