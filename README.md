@@ -2,7 +2,12 @@
 
 This repository contains a simple FastAPI application that is deployed to Google Cloud Run using GitHub Actions and Workload Identity Federation.
 
+## Project URL
+
+It's live: https://fastapi-demo-957176400089.us-central1.run.app
+
 ## Setup Instructions
+
 
 ### 1. Create a Google Cloud Project
 If you haven't already, create a new Google Cloud Project and enable the necessary APIs:
