@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
+# FastAPI application for Cloud Run deployment
 app = FastAPI(title="FastAPI Demo App")
 
 @app.get("/")
