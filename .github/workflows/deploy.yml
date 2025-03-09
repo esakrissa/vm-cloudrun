@@ -28,12 +28,18 @@ jobs:
         with:
           workload_identity_provider: projects/957176400089/locations/global/workloadIdentityPools/github-pool/providers/github-provider
           service_account: github-actions-sa@travel-agency-448103.iam.gserviceaccount.com
+          token_format: "access_token"
+          create_credentials_file: true
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+          install_components: "beta,docker-credential-gcr"
 
-      - name: Authorize Docker push
-        run: gcloud auth configure-docker ${{ env.REGISTRY }}
+      - name: Configure Docker authentication
+        run: |-
+          gcloud auth configure-docker ${{ env.REGISTRY }} --quiet
 
       - name: Build and Push Container
         run: |-
