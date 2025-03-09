@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
-# FastAPI application for Cloud Run deployment
+# FastAPI application for Cloud Run deployment v1.0
 app = FastAPI(title="FastAPI Demo App")
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World", "version": "1.0"}
 
 @app.get("/health")
 async def health_check():
